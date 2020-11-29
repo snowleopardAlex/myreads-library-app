@@ -11,9 +11,7 @@ const BookShelfDetails = ({ book, handleBookshelf }) => {
        <Card style={{borderColor: "transparent"}}>
          <Card.Img className="ml-4" style={{ width: 128, height: 193, backgroundImage: `url(${bookCover})`}} />
             <Card.Body>
-              <Card.Title style={{fontSize: "18px"}}>{book.title}</Card.Title>
-              <Card.Text style={{fontSize: "16px"}}>{book.authors}</Card.Text>
-              <Dropdown className="mt-4">
+            <Dropdown style={{marginTop: "-35px", marginLeft: "105px"}}>
                <Dropdown.Toggle 
                style={{
                backgroundColor: "#CC00FF", 
@@ -40,6 +38,8 @@ const BookShelfDetails = ({ book, handleBookshelf }) => {
            </Form>
           </Dropdown.Menu>
         </Dropdown>
+              <Card.Title className="mt-4" style={{fontSize: "18px"}}>{book.title}</Card.Title>
+              <Card.Text style={{fontSize: "16px"}}>{book.authors}</Card.Text>
       </Card.Body>
     </Card>
    </div>
