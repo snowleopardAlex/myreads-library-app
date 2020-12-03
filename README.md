@@ -15,14 +15,23 @@ For this project you will need to download the repository, and run npm install i
 **Configuration**
 
 In order to make the project to work you need to install dependencies: 
+
     "bootstrap": "^4.5.3",
+    
     "escape-string-regexp": "^4.0.0",
+    
     "prop-types": "^15.7.2",
+    
     "react": "^17.0.1",
+    
     "react-bootstrap": "^1.4.0",
+    
     "react-dom": "^17.0.1",
+    
     "react-router-dom": "^5.2.0",
+    
     "react-scripts": "4.0.0",
+    
     "web-vitals": "^0.2.4"
 
 
