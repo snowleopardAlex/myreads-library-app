@@ -15,7 +15,7 @@ class SearchBooks extends Component {
             query: ''
         };
         // Binding is necessary to make "this" work in the callback
-        this.handleBookshelf = this.handleBookshelf.bind(this)   
+        this.handleBookShelf = this.handleBookShelf.bind(this)   
     }
     // searching for the query inside backend
     // in order to re-render the state with changes, we need to use this.setState
@@ -25,12 +25,17 @@ class SearchBooks extends Component {
     }    
 
     // updating the shelf from backend
-    handleBookshelf(book, shelf) {
+    handleBookShelf(book, shelf) {
         BooksAPI.update(book, shelf)
           .then(() => shelf !== "none" ? alert(`${book.title} has been added to your shelf!`) : alert(`You haven't added any book to your shelf!`))
           // catch() block of promise is responsible for throwing errors.
           .catch(() => alert("Something went wrong! Please try again!"));
+
+          //this.setState({
+          //  book, shelf
+         // });
     }
+
 
     displaySearchResults() {
         // destructuring variable
@@ -46,7 +51,7 @@ class SearchBooks extends Component {
                     <BookShelfDetails
                        key={index}
                        book={book}
-                       handleBookshelf={this.handleBookshelf}
+                       handleBookShelf={this.handleBookShelf}
                     />
                     </div>
                 );
@@ -54,7 +59,6 @@ class SearchBooks extends Component {
         }
       }
     
-
     render() {
         return (
            <div className="searchbooks">
@@ -86,3 +90,5 @@ class SearchBooks extends Component {
 }
 
 export default SearchBooks;
+
+

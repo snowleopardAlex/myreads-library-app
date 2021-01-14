@@ -232,3 +232,35 @@ str.search(/todd/i);
 // https://www.youtube.com/watch?v=6sBqMyUOcl8&list=PLXBpB4yr0FyzK1DGHwse4Dn3cymC3vYmI&index=52
 // https://reactjs.org/docs/handling-events.html
 
+// ESLINT suggests to destructure the variable. 
+// ESLINT - is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
+// with the goal of making code more consistent and avoiding bugs. In many ways, it is similar to 
+// JSLint and JSHint with a few expectations: ESLint uses Espree for JS parsing. 
+
+
+//::::::::::::::::::::::::::: BUGS ::::::::::::::::::::::::::::::: //
+
+// BUG: When I choose the book from SEARCH PAGE and assign it to the shelf - it is sent there
+// but when I come back to the SEARCH PAGE from MyReads page and when I click on the book 
+// to see which shelf the book is currently on, the shelf shows me first option, i.e --> Currently Reading, not READ as 
+// it supposed to be. 
+
+// SOLUTION: The books returned by the search API do not have the shelf infromation. 
+// These books do not know which shelf they are on. They are raw results only. 
+// You will need to make sure that books have the correct state while on the search page. 
+// TO FIX THIS: we can add the shelf information using currentlyReading, wantToRead and read state maintained in MyReads component.
+// These states can be MOVED UP, inside App component, so that it can be passed to both MyReads and Search Books components. 
+
+// SO FAR: 
+
+// When you change from class component to functional component, remember that you 
+// lose THIS keyword. 
+
+// The ReferenceError object represents an error when a non-existent variable is referenced.
+// ES2015 is the updated version of JavaScript (also known as ECMAScript). The more lax term for ES2015 is ES6.
+// In ES2015, two other ways to declare variables were introduced. They are LET and CONST. 
+
+// n X Is Not a Function TypeError typically occurs in one of the following three scenarios: 
+// When a function call is made on a property of that simply isn't a function. 
+// When a function call is made on an object type that doesn't contain that function or method.
+
